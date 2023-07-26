@@ -4,17 +4,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class TodoJpaResource {
 
-    private final TodoService service;
-
     private final TodoRepository todoRepository;
 
-    public TodoJpaResource(TodoService service, TodoRepository todoRepository) {
-        this.service = service;
+    public TodoJpaResource( TodoRepository todoRepository) {
         this.todoRepository = todoRepository;
     }
 
